@@ -61,9 +61,11 @@ const HeroSection = () => {
                 </Button>
               </motion.div>
               <motion.div whileTap={{ scale: 0.98, y: 2 }} transition={springConfig}>
-                <Button variant="outline" size="xl">
-                  Explore Courses
-                </Button>
+                <Link to="/courses">
+                  <Button variant="outline" size="xl">
+                    Explore Courses
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 
