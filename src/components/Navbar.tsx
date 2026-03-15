@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Code2, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Courses", href: "#courses" },
