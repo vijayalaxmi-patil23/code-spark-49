@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Courses", href: "#courses" },
+  { label: "Courses", href: "/courses" },
   { label: "Practice", href: "#practice" },
   { label: "Community", href: "#community" },
   { label: "Pricing", href: "#pricing" },
