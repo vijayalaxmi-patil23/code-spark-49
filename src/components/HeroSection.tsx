@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Play, Zap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-code.png";
 
 const stats = [
