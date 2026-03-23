@@ -113,6 +113,7 @@ export const coursesData: Course[] = [
         title: "JavaScript Basics",
         description: "Core concepts of JavaScript",
         lessons: [
+          { id: "js-1-0", title: "JavaScript Crash Course", duration: "12 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/hdI2bqOjy3c", content: "A fast-paced introduction to JavaScript fundamentals. Perfect for getting a visual overview before diving into the text lessons." },
           { id: "js-1-1", title: "What is JavaScript?", duration: "5 min", type: "text", completed: false, xp: 10, content: "JavaScript is the programming language of the web. Every website you visit uses JavaScript to create interactive experiences.\n\nOriginally created for browsers, JavaScript now runs everywhere — servers (Node.js), mobile apps (React Native), and even desktop apps (Electron).", codeExample: '// JavaScript in action\nconsole.log("Hello, JavaScript!");\n\nlet message = "Welcome to Kodemy";\nconsole.log(message);' },
           { id: "js-1-2", title: "Variables: let, const, var", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "js-1-3", title: "Data Types", duration: "12 min", type: "text", completed: false, xp: 10 },
