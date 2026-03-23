@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, CheckCircle2, Circle, Code, FileText, HelpCircle, Lock, Star, Trophy, Users, Zap } from "lucide-react";
+import { ArrowLeft, BookOpen, CheckCircle2, Circle, Code, FileText, HelpCircle, Lock, Play, Star, Trophy, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,12 +10,14 @@ const typeIcons = {
   text: FileText,
   exercise: Code,
   quiz: HelpCircle,
+  video: Play,
 };
 
 const typeLabels = {
   text: "Lesson",
   exercise: "Exercise",
   quiz: "Quiz",
+  video: "Video",
 };
 
 const CourseDetail = () => {

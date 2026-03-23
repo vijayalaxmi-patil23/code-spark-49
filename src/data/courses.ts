@@ -2,11 +2,12 @@ export interface Lesson {
   id: string;
   title: string;
   duration: string;
-  type: "text" | "exercise" | "quiz";
+  type: "text" | "exercise" | "quiz" | "video";
   completed: boolean;
   xp: number;
   content?: string;
   codeExample?: string;
+  videoUrl?: string;
 }
 
 export interface Module {
@@ -50,6 +51,7 @@ export const coursesData: Course[] = [
         title: "Getting Started",
         description: "Your first steps into Python programming",
         lessons: [
+          { id: "py-1-0", title: "Python in 10 Minutes", duration: "10 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/x7X9w_GIm1s", content: "Watch this quick overview of Python programming to understand what makes it one of the most popular languages in the world." },
           { id: "py-1-1", title: "What is Python?", duration: "5 min", type: "text", completed: false, xp: 10, content: "Python is a high-level, interpreted programming language known for its simplicity and readability. Created by Guido van Rossum in 1991, Python has become one of the most popular languages in the world.\n\nPython is used for:\n- Web development (Django, Flask)\n- Data Science & Machine Learning\n- Automation & Scripting\n- Game Development\n- Desktop Applications", codeExample: '# Your first Python program\nprint("Hello, World!")\n\n# Python is easy to read\nname = "Kodemy"\nprint(f"Welcome to {name}!")' },
           { id: "py-1-2", title: "Installing Python", duration: "8 min", type: "text", completed: false, xp: 10, content: "Before you start coding, you need to set up your development environment. Don't worry — we have an in-browser editor, but it's good to know how to install Python locally.\n\nPython can be downloaded from python.org. The latest version (3.12+) is recommended for new learners." },
           { id: "py-1-3", title: "Your First Program", duration: "10 min", type: "exercise", completed: false, xp: 25, content: "Let's write your very first Python program! The print() function is used to display output to the console.", codeExample: '# Try it yourself!\n# Change the message below\nprint("Hello, World!")\n\n# You can print numbers too\nprint(42)\nprint(3.14)' },
@@ -111,6 +113,7 @@ export const coursesData: Course[] = [
         title: "JavaScript Basics",
         description: "Core concepts of JavaScript",
         lessons: [
+          { id: "js-1-0", title: "JavaScript Crash Course", duration: "12 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/hdI2bqOjy3c", content: "A fast-paced introduction to JavaScript fundamentals. Perfect for getting a visual overview before diving into the text lessons." },
           { id: "js-1-1", title: "What is JavaScript?", duration: "5 min", type: "text", completed: false, xp: 10, content: "JavaScript is the programming language of the web. Every website you visit uses JavaScript to create interactive experiences.\n\nOriginally created for browsers, JavaScript now runs everywhere — servers (Node.js), mobile apps (React Native), and even desktop apps (Electron).", codeExample: '// JavaScript in action\nconsole.log("Hello, JavaScript!");\n\nlet message = "Welcome to Kodemy";\nconsole.log(message);' },
           { id: "js-1-2", title: "Variables: let, const, var", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "js-1-3", title: "Data Types", duration: "12 min", type: "text", completed: false, xp: 10 },
@@ -158,6 +161,7 @@ export const coursesData: Course[] = [
         title: "Java Fundamentals",
         description: "Core Java syntax and concepts",
         lessons: [
+          { id: "java-1-0", title: "Java for Beginners", duration: "14 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/eIrMbAQSU34", content: "An introductory video covering Java's core concepts and why it remains one of the most in-demand programming languages." },
           { id: "java-1-1", title: "Hello Java", duration: "8 min", type: "text", completed: false, xp: 10 },
           { id: "java-1-2", title: "Variables & Types", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "java-1-3", title: "Control Structures", duration: "15 min", type: "text", completed: false, xp: 10 },
@@ -195,6 +199,7 @@ export const coursesData: Course[] = [
         title: "SQL Basics",
         description: "Your first queries",
         lessons: [
+          { id: "sql-1-0", title: "SQL Tutorial for Beginners", duration: "11 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/HXV3zeQKqGY", content: "Learn the basics of SQL in this beginner-friendly video tutorial covering SELECT, WHERE, and basic queries." },
           { id: "sql-1-1", title: "What is SQL?", duration: "5 min", type: "text", completed: false, xp: 10 },
           { id: "sql-1-2", title: "SELECT Statements", duration: "10 min", type: "text", completed: false, xp: 10, codeExample: "-- Select all columns\nSELECT * FROM users;\n\n-- Select specific columns\nSELECT name, email FROM users;\n\n-- Filter with WHERE\nSELECT * FROM users WHERE age > 25;" },
           { id: "sql-1-3", title: "WHERE & Filtering", duration: "12 min", type: "text", completed: false, xp: 10 },
@@ -231,6 +236,7 @@ export const coursesData: Course[] = [
         title: "Introduction to Data Science",
         description: "What data scientists do",
         lessons: [
+          { id: "ds-1-0", title: "What is Data Science?", duration: "9 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/X3paOmcrTjQ", content: "An engaging introduction to the field of data science, covering key concepts, tools, and career paths." },
           { id: "ds-1-1", title: "Data Science Overview", duration: "8 min", type: "text", completed: false, xp: 10 },
           { id: "ds-1-2", title: "NumPy Basics", duration: "15 min", type: "text", completed: false, xp: 10 },
           { id: "ds-1-3", title: "Pandas DataFrames", duration: "18 min", type: "text", completed: false, xp: 15 },
@@ -257,6 +263,7 @@ export const coursesData: Course[] = [
         title: "ML Foundations",
         description: "Core concepts of machine learning",
         lessons: [
+          { id: "ml-1-0", title: "Machine Learning Explained", duration: "10 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/ukzFI9rgwfU", content: "A visual explanation of machine learning concepts — what it is, how it works, and why it matters." },
           { id: "ml-1-1", title: "What is Machine Learning?", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "ml-1-2", title: "Types of ML", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "ml-1-3", title: "Linear Regression", duration: "20 min", type: "text", completed: false, xp: 15 },
