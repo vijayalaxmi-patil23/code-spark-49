@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
-import { Code2, Menu, X } from "lucide-react";
+import { Code2, Menu, X, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const navLinks = [
   { label: "Courses", href: "/courses" },
@@ -13,6 +21,19 @@ const navLinks = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/");
+  };
+
+  const initials = user?.user_metadata?.full_name
+    ?.split(" ")
+    .map((n: string) => n[0])
+    .join("")
+    .toUpperCase() || user?.email?.[0]?.toUpperCase() || "U";
 
   return (
     <motion.nav
@@ -26,27 +47,17 @@ const Navbar = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-keycap-sm">
             <Code2 className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-foreground">
-            Kodemy
-          </span>
+          <span className="text-xl font-bold tracking-tight text-foreground">Kodemy</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) =>
             link.href.startsWith("/") ? (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <Link key={link.label} to={link.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 {link.label}
               </Link>
             ) : (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <a key={link.label} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 {link.label}
               </a>
             )
@@ -54,18 +65,41 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm">
-            Log in
-          </Button>
-          <Button variant="default" size="sm">
-            Start Free
-          </Button>
+          {user ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <Avatar className="h-8 w-8">
+                    <AvatarImage src={user.user_metadata?.avatar_url} />
+                    <AvatarFallback className="bg-primary text-primary-foreground text-xs">{initials}</AvatarFallback>
+                  </Avatar>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuItem className="text-muted-foreground text-xs" disabled>
+                  {user.email}
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate("/courses")}>
+                  <User className="h-4 w-4 mr-2" /> My Courses
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={handleSignOut}>
+                  <LogOut className="h-4 w-4 mr-2" /> Log out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <>
+              <Link to="/auth">
+                <Button variant="ghost" size="sm">Log in</Button>
+              </Link>
+              <Link to="/auth">
+                <Button variant="default" size="sm">Start Free</Button>
+              </Link>
+            </>
+          )}
         </div>
 
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
@@ -77,17 +111,19 @@ const Navbar = () => {
           className="md:hidden border-t border-border bg-background px-4 pb-4"
         >
           {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="block py-3 text-sm font-medium text-muted-foreground hover:text-foreground"
-            >
+            <a key={link.label} href={link.href} className="block py-3 text-sm font-medium text-muted-foreground hover:text-foreground">
               {link.label}
             </a>
           ))}
           <div className="flex flex-col gap-2 pt-2">
-            <Button variant="ghost" size="sm">Log in</Button>
-            <Button variant="default" size="sm">Start Free</Button>
+            {user ? (
+              <Button variant="ghost" size="sm" onClick={handleSignOut}>Log out</Button>
+            ) : (
+              <>
+                <Link to="/auth"><Button variant="ghost" size="sm" className="w-full">Log in</Button></Link>
+                <Link to="/auth"><Button variant="default" size="sm" className="w-full">Start Free</Button></Link>
+              </>
+            )}
           </div>
         </motion.div>
       )}
