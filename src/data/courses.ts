@@ -63,6 +63,7 @@ export const coursesData: Course[] = [
         title: "Variables & Data Types",
         description: "Store and manipulate data in Python",
         lessons: [
+          { id: "py-2-0", title: "Python Variables Explained", duration: "15 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/cQT33yu9pY8", content: "A visual guide to understanding variables and data types in Python." },
           { id: "py-2-1", title: "Variables", duration: "8 min", type: "text", completed: false, xp: 10, content: "Variables are containers for storing data values. In Python, you don't need to declare a variable type — Python figures it out automatically.\n\nVariable naming rules:\n- Must start with a letter or underscore\n- Can contain letters, numbers, and underscores\n- Case-sensitive (age and Age are different)", codeExample: '# Creating variables\nname = "Alice"\nage = 25\nheight = 5.6\nis_student = True\n\nprint(name)\nprint(age)\nprint(type(name))  # <class \'str\'>' },
           { id: "py-2-2", title: "Strings", duration: "12 min", type: "text", completed: false, xp: 10, content: "Strings are sequences of characters enclosed in quotes. Python provides powerful string manipulation capabilities." },
           { id: "py-2-3", title: "Numbers", duration: "10 min", type: "text", completed: false, xp: 10 },
