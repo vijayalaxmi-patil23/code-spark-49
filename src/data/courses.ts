@@ -63,6 +63,7 @@ export const coursesData: Course[] = [
         title: "Variables & Data Types",
         description: "Store and manipulate data in Python",
         lessons: [
+          { id: "py-2-0", title: "Python Variables Explained", duration: "15 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/cQT33yu9pY8", content: "A visual guide to understanding variables and data types in Python." },
           { id: "py-2-1", title: "Variables", duration: "8 min", type: "text", completed: false, xp: 10, content: "Variables are containers for storing data values. In Python, you don't need to declare a variable type — Python figures it out automatically.\n\nVariable naming rules:\n- Must start with a letter or underscore\n- Can contain letters, numbers, and underscores\n- Case-sensitive (age and Age are different)", codeExample: '# Creating variables\nname = "Alice"\nage = 25\nheight = 5.6\nis_student = True\n\nprint(name)\nprint(age)\nprint(type(name))  # <class \'str\'>' },
           { id: "py-2-2", title: "Strings", duration: "12 min", type: "text", completed: false, xp: 10, content: "Strings are sequences of characters enclosed in quotes. Python provides powerful string manipulation capabilities." },
           { id: "py-2-3", title: "Numbers", duration: "10 min", type: "text", completed: false, xp: 10 },
@@ -75,6 +76,7 @@ export const coursesData: Course[] = [
         title: "Control Flow",
         description: "Make decisions and repeat actions",
         lessons: [
+          { id: "py-3-0", title: "Python If/Else & Loops", duration: "18 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/PqFKRqpHrjw", content: "Learn how to control the flow of your Python programs with conditionals and loops." },
           { id: "py-3-1", title: "If Statements", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "py-3-2", title: "For Loops", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "py-3-3", title: "While Loops", duration: "10 min", type: "text", completed: false, xp: 10 },
@@ -87,6 +89,7 @@ export const coursesData: Course[] = [
         title: "Functions",
         description: "Write reusable blocks of code",
         lessons: [
+          { id: "py-4-0", title: "Python Functions Tutorial", duration: "20 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/9Os0o3wzS_I", content: "Master Python functions — defining, calling, parameters, return values, and best practices." },
           { id: "py-4-1", title: "Defining Functions", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "py-4-2", title: "Parameters & Arguments", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "py-4-3", title: "Return Values", duration: "8 min", type: "text", completed: false, xp: 10 },
@@ -125,6 +128,7 @@ export const coursesData: Course[] = [
         title: "Functions & Scope",
         description: "Master functions and closures",
         lessons: [
+          { id: "js-2-0", title: "JS Functions & Closures", duration: "16 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/3a0I8ICR1Vg", content: "Deep dive into JavaScript functions, scope, and closures with visual examples." },
           { id: "js-2-1", title: "Function Declarations", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "js-2-2", title: "Arrow Functions", duration: "8 min", type: "text", completed: false, xp: 10 },
           { id: "js-2-3", title: "Closures", duration: "15 min", type: "text", completed: false, xp: 15 },
@@ -136,6 +140,7 @@ export const coursesData: Course[] = [
         title: "DOM Manipulation",
         description: "Interact with web pages",
         lessons: [
+          { id: "js-3-0", title: "DOM Manipulation Tutorial", duration: "20 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/y17RuWkWdn8", content: "Learn how to select, modify, and interact with HTML elements using JavaScript." },
           { id: "js-3-1", title: "Selecting Elements", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "js-3-2", title: "Event Listeners", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "js-3-3", title: "Build a To-Do App", duration: "25 min", type: "exercise", completed: false, xp: 50 },
@@ -173,6 +178,7 @@ export const coursesData: Course[] = [
         title: "Object-Oriented Programming",
         description: "Classes, objects, and inheritance",
         lessons: [
+          { id: "java-2-0", title: "Java OOP Concepts", duration: "22 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/pTB0EiLXUC8", content: "Understand object-oriented programming in Java — classes, objects, inheritance, and polymorphism explained visually." },
           { id: "java-2-1", title: "Classes & Objects", duration: "15 min", type: "text", completed: false, xp: 15 },
           { id: "java-2-2", title: "Inheritance", duration: "15 min", type: "text", completed: false, xp: 15 },
           { id: "java-2-3", title: "Interfaces", duration: "12 min", type: "text", completed: false, xp: 15 },
@@ -211,6 +217,7 @@ export const coursesData: Course[] = [
         title: "Joins & Relations",
         description: "Combine data from multiple tables",
         lessons: [
+          { id: "sql-2-0", title: "SQL Joins Explained", duration: "14 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/9yeOJ0ZMUYw", content: "Visual explanation of INNER, LEFT, RIGHT, and FULL JOINs with practical examples." },
           { id: "sql-2-1", title: "INNER JOIN", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "sql-2-2", title: "LEFT & RIGHT JOIN", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "sql-2-3", title: "JOIN Challenge", duration: "20 min", type: "exercise", completed: false, xp: 35 },
