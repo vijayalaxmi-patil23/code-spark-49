@@ -10,12 +10,14 @@ const typeIcons = {
   text: FileText,
   exercise: Code,
   quiz: HelpCircle,
+  video: Play,
 };
 
 const typeLabels = {
   text: "Lesson",
   exercise: "Exercise",
   quiz: "Quiz",
+  video: "Video",
 };
 
 const CourseDetail = () => {

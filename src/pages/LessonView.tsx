@@ -110,6 +110,26 @@ const LessonView = () => {
 
             <h1 className="text-2xl sm:text-3xl font-extrabold mb-6">{currentLesson.title}</h1>
 
+            {/* Video Player */}
+            {currentLesson.videoUrl && (
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15 }}
+                className="rounded-xl border border-border bg-card shadow-keycap-sm overflow-hidden mb-8"
+              >
+                <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                  <iframe
+                    src={currentLesson.videoUrl}
+                    title={currentLesson.title}
+                    className="absolute inset-0 w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </motion.div>
+            )}
+
             {/* Lesson Content */}
             {currentLesson.content && (
               <div className="prose prose-invert max-w-none mb-8">
