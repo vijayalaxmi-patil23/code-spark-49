@@ -50,6 +50,7 @@ const LessonView = () => {
     text: FileText,
     exercise: Code,
     quiz: HelpCircle,
+    video: Play,
   }[currentLesson.type];
   const TypeIcon = typeIcon;
 
