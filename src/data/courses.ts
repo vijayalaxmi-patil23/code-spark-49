@@ -2,11 +2,12 @@ export interface Lesson {
   id: string;
   title: string;
   duration: string;
-  type: "text" | "exercise" | "quiz";
+  type: "text" | "exercise" | "quiz" | "video";
   completed: boolean;
   xp: number;
   content?: string;
   codeExample?: string;
+  videoUrl?: string;
 }
 
 export interface Module {
