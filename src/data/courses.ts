@@ -263,6 +263,7 @@ export const coursesData: Course[] = [
         title: "ML Foundations",
         description: "Core concepts of machine learning",
         lessons: [
+          { id: "ml-1-0", title: "Machine Learning Explained", duration: "10 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/ukzFI9rgwfU", content: "A visual explanation of machine learning concepts — what it is, how it works, and why it matters." },
           { id: "ml-1-1", title: "What is Machine Learning?", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "ml-1-2", title: "Types of ML", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "ml-1-3", title: "Linear Regression", duration: "20 min", type: "text", completed: false, xp: 15 },
