@@ -178,6 +178,7 @@ export const coursesData: Course[] = [
         title: "Object-Oriented Programming",
         description: "Classes, objects, and inheritance",
         lessons: [
+          { id: "java-2-0", title: "Java OOP Concepts", duration: "22 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/pTB0EiLXUC8", content: "Understand object-oriented programming in Java — classes, objects, inheritance, and polymorphism explained visually." },
           { id: "java-2-1", title: "Classes & Objects", duration: "15 min", type: "text", completed: false, xp: 15 },
           { id: "java-2-2", title: "Inheritance", duration: "15 min", type: "text", completed: false, xp: 15 },
           { id: "java-2-3", title: "Interfaces", duration: "12 min", type: "text", completed: false, xp: 15 },
