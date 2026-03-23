@@ -236,6 +236,7 @@ export const coursesData: Course[] = [
         title: "Introduction to Data Science",
         description: "What data scientists do",
         lessons: [
+          { id: "ds-1-0", title: "What is Data Science?", duration: "9 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/X3paOmcrTjQ", content: "An engaging introduction to the field of data science, covering key concepts, tools, and career paths." },
           { id: "ds-1-1", title: "Data Science Overview", duration: "8 min", type: "text", completed: false, xp: 10 },
           { id: "ds-1-2", title: "NumPy Basics", duration: "15 min", type: "text", completed: false, xp: 10 },
           { id: "ds-1-3", title: "Pandas DataFrames", duration: "18 min", type: "text", completed: false, xp: 15 },
