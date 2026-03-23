@@ -217,6 +217,7 @@ export const coursesData: Course[] = [
         title: "Joins & Relations",
         description: "Combine data from multiple tables",
         lessons: [
+          { id: "sql-2-0", title: "SQL Joins Explained", duration: "14 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/9yeOJ0ZMUYw", content: "Visual explanation of INNER, LEFT, RIGHT, and FULL JOINs with practical examples." },
           { id: "sql-2-1", title: "INNER JOIN", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "sql-2-2", title: "LEFT & RIGHT JOIN", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "sql-2-3", title: "JOIN Challenge", duration: "20 min", type: "exercise", completed: false, xp: 35 },
