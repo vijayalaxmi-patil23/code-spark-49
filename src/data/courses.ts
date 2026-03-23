@@ -76,6 +76,7 @@ export const coursesData: Course[] = [
         title: "Control Flow",
         description: "Make decisions and repeat actions",
         lessons: [
+          { id: "py-3-0", title: "Python If/Else & Loops", duration: "18 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/PqFKRqpHrjw", content: "Learn how to control the flow of your Python programs with conditionals and loops." },
           { id: "py-3-1", title: "If Statements", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "py-3-2", title: "For Loops", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "py-3-3", title: "While Loops", duration: "10 min", type: "text", completed: false, xp: 10 },
