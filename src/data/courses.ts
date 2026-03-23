@@ -89,6 +89,7 @@ export const coursesData: Course[] = [
         title: "Functions",
         description: "Write reusable blocks of code",
         lessons: [
+          { id: "py-4-0", title: "Python Functions Tutorial", duration: "20 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/9Os0o3wzS_I", content: "Master Python functions — defining, calling, parameters, return values, and best practices." },
           { id: "py-4-1", title: "Defining Functions", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "py-4-2", title: "Parameters & Arguments", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "py-4-3", title: "Return Values", duration: "8 min", type: "text", completed: false, xp: 10 },
