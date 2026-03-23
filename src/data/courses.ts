@@ -140,6 +140,7 @@ export const coursesData: Course[] = [
         title: "DOM Manipulation",
         description: "Interact with web pages",
         lessons: [
+          { id: "js-3-0", title: "DOM Manipulation Tutorial", duration: "20 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/y17RuWkWdn8", content: "Learn how to select, modify, and interact with HTML elements using JavaScript." },
           { id: "js-3-1", title: "Selecting Elements", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "js-3-2", title: "Event Listeners", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "js-3-3", title: "Build a To-Do App", duration: "25 min", type: "exercise", completed: false, xp: 50 },
