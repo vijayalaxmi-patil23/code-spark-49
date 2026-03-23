@@ -161,6 +161,7 @@ export const coursesData: Course[] = [
         title: "Java Fundamentals",
         description: "Core Java syntax and concepts",
         lessons: [
+          { id: "java-1-0", title: "Java for Beginners", duration: "14 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/eIrMbAQSU34", content: "An introductory video covering Java's core concepts and why it remains one of the most in-demand programming languages." },
           { id: "java-1-1", title: "Hello Java", duration: "8 min", type: "text", completed: false, xp: 10 },
           { id: "java-1-2", title: "Variables & Types", duration: "12 min", type: "text", completed: false, xp: 10 },
           { id: "java-1-3", title: "Control Structures", duration: "15 min", type: "text", completed: false, xp: 10 },
