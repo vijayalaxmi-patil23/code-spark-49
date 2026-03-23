@@ -128,6 +128,7 @@ export const coursesData: Course[] = [
         title: "Functions & Scope",
         description: "Master functions and closures",
         lessons: [
+          { id: "js-2-0", title: "JS Functions & Closures", duration: "16 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/3a0I8ICR1Vg", content: "Deep dive into JavaScript functions, scope, and closures with visual examples." },
           { id: "js-2-1", title: "Function Declarations", duration: "10 min", type: "text", completed: false, xp: 10 },
           { id: "js-2-2", title: "Arrow Functions", duration: "8 min", type: "text", completed: false, xp: 10 },
           { id: "js-2-3", title: "Closures", duration: "15 min", type: "text", completed: false, xp: 15 },
