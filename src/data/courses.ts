@@ -199,6 +199,7 @@ export const coursesData: Course[] = [
         title: "SQL Basics",
         description: "Your first queries",
         lessons: [
+          { id: "sql-1-0", title: "SQL Tutorial for Beginners", duration: "11 min", type: "video", completed: false, xp: 15, videoUrl: "https://www.youtube.com/embed/HXV3zeQKqGY", content: "Learn the basics of SQL in this beginner-friendly video tutorial covering SELECT, WHERE, and basic queries." },
           { id: "sql-1-1", title: "What is SQL?", duration: "5 min", type: "text", completed: false, xp: 10 },
           { id: "sql-1-2", title: "SELECT Statements", duration: "10 min", type: "text", completed: false, xp: 10, codeExample: "-- Select all columns\nSELECT * FROM users;\n\n-- Select specific columns\nSELECT name, email FROM users;\n\n-- Filter with WHERE\nSELECT * FROM users WHERE age > 25;" },
           { id: "sql-1-3", title: "WHERE & Filtering", duration: "12 min", type: "text", completed: false, xp: 10 },
